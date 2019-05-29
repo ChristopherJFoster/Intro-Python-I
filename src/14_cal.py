@@ -28,6 +28,7 @@ newline = '\n'
 
 m = datetime.now().month
 y = datetime.now().year
+inputexample = f'Input should be a numerical month and year, in the form of: {m} {y}'
 
 print(newline, end='')
 calInput = input(
@@ -38,12 +39,12 @@ if calInput[0] != '':
         int(calInput[0])
     except ValueError:
         print(
-            newline, f'Input should be a numerical month and year, in the form of: {m} {y}', newline)
+            newline, inputexample, newline)
         sys.exit()
 
     if int(calInput[0]) not in range(1, 13):
         print(
-            newline, f'Input should be a numerical month and year, in the form of: {m} {y}', newline)
+            newline, inputexample, newline)
         sys.exit()
     else:
         m = int(calInput[0])
@@ -53,7 +54,7 @@ if calInput[0] != '':
             int(calInput[1])
         except ValueError:
             print(
-                newline, f'Input should be a numerical month and year, in the form of: {m} {y}', newline)
+                newline, inputexample, newline)
             sys.exit()
         y = int(calInput[1])
 
