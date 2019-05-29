@@ -58,4 +58,4 @@ if calInput[0] != '':
             sys.exit()
         y = int(calInput[1])
 
-print('\n', calendar.month(y, m))
+print(newline, calendar.month(y, m))
